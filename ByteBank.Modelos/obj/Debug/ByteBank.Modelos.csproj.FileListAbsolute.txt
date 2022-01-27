@@ -1,0 +1,7 @@
+C:\Dev\Alura\C#\Curso7\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.xml
+C:\Dev\Alura\C#\Curso7\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.dll
+C:\Dev\Alura\C#\Curso7\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.pdb
+C:\Dev\Alura\C#\Curso7\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.AssemblyReference.cache
+C:\Dev\Alura\C#\Curso7\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.CoreCompileInputs.cache
+C:\Dev\Alura\C#\Curso7\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.dll
+C:\Dev\Alura\C#\Curso7\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.pdb
