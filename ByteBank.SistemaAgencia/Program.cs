@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ByteBank.Modelos;
-using ByteBank.Modelos.Funcionarios;
+using ByteBank.SistemaAgencia.Extensions;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -12,22 +9,26 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            Lista<int> lista = new Lista<int>();
+            List<int> lista = new List<int>();
 
-            lista.Adicionar(1);
-            lista.AdicionarVarios(1, 2, 3, 3, 4, 5, 6, 7, 8, 9);
+            lista.Add(1);
+            lista.Add(2);
+            lista.Add(3);
+            lista.Add(4);
+            lista.Add(5);
+            
+            List<string> lista2 = new List<string>();
+            //ListExtensoes.AddVarios(lista, 0, 2, 3, 3, 4, 5, 6, 7, 8, 9);
 
-            for (int i = 0; i < lista.Tamanho; i++)
+            lista2.Add("a");
+            lista2.AddVarios("1", "2");
+
+            lista.Remove(1);
+
+            for (int i = 0; i < lista.Count; i++)
             {
-                int num = (int)lista[i];
-                Console.WriteLine($"Numero" +
-                    $" no indice {i}: {num}");
+                Console.WriteLine(lista[i]);
             }
-
-
-            Console.WriteLine(SomarVarios(1, 2, 3, 5, 56465, 45));
-            Console.WriteLine(SomarVarios(1, 2, 45));
-
 
             Console.ReadLine();
         }

@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Estagiario.cs" />
+    <Compile Include="Extensions\ListExtencoes.cs" />
     <Compile Include="Lista.cs" />
     <Compile Include="ListaContaCorrente.cs" />
     <Compile Include="ListaDeObject.cs" />
