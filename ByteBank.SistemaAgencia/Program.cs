@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ByteBank.Modelos;
 using ByteBank.SistemaAgencia.Extensions;
+using ByteBank.SistemaAgencia.Comparables;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -9,29 +10,66 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            List<int> lista = new List<int>();
+            var contas = new List<ContaCorrente> 
+            { 
+                new ContaCorrente(123, 456879789),
+                new ContaCorrente(23, 46879789),
+                new ContaCorrente(12, 45689789),
+                new ContaCorrente(122, 45687979),
+                new ContaCorrente(128, 45687978),
+                new ContaCorrente(173, 456879789),
+            };
+
+            //contas.Sort(); ~~> Chama a implementação dada em IComparableC
+
+            contas.Sort(new ComparadorContaCorrentePorAgencia());
+
+            foreach (var cont in contas)
+            {
+                Console.WriteLine(cont.Agencia + " " + cont.Numero);
+            }
+
+            Console.ReadLine();
+        }
+
+        static void TestaSoet()
+        {
+            var lista = new List<int>();
+            //ListExtensoes.AddVarios(lista, 0, 2, 3, 3, 4, 5, 6, 7, 8, 9);
 
             lista.Add(1);
             lista.Add(2);
             lista.Add(3);
             lista.Add(4);
             lista.Add(5);
-            
-            List<string> lista2 = new List<string>();
-            //ListExtensoes.AddVarios(lista, 0, 2, 3, 3, 4, 5, 6, 7, 8, 9);
 
-            lista2.Add("a");
-            lista2.AddVarios("1", "2");
-
+            lista.AddVarios(09, 28, 93, 33, 84, 45, 624, 457, 386383, 09);
             lista.Remove(1);
 
-            for (int i = 0; i < lista.Count; i++)
+            lista.Sort();
+
+            var lista2 = new List<string>()
+            {
+                "a",
+                "g",
+                "r",
+                "u",
+                "p",
+                "y"
+            };
+            lista2.Sort();
+
+
+            for (var i = 0; i < lista.Count; i++)
             {
                 Console.WriteLine(lista[i]);
             }
-
-            Console.ReadLine();
+            for (var i = 0; i < lista2.Count; i++)
+            {
+                Console.WriteLine(lista2[i]);
+            }
         }
+
 
         static void TestaListaDEObject()
         {
